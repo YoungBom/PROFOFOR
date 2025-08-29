@@ -1,0 +1,178 @@
+/* COMMON */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* 스크롤 이동을 부드럽게 */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #333;
+
+  /* 고정된 헤더 테스트용 */
+  /* height: 3000px; */
+}
+
+/* 영문에만 적용할 폰트 */
+.font-en {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  /* 밑줄 제거 */
+  text-decoration: none;
+  color: inherit;
+}
+
+.inner {
+  /* 고정 길이=고정형 */
+  /* width: 1200px; */
+  /* 최대값만 제한=반응형 */
+  max-width: 1200px;
+  /* 가로 너비를 가진 블록 요소의 가운데 정렬 */
+  margin: 0 auto;
+}
+
+.animate-flash {
+  animation-name: flash;
+  animation-duration: 0.5s;
+}
+
+/* HEADER */
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #c8c8c8;
+  box-shadow: 0 2px 8px rgba(204, 204, 204, 0.8);
+
+  /* 고정된 헤더 만들기 */
+  /* 부모 요소의 width 기준이 끊겨버리고, width를 지정하지 않으면 내용에 맞춰 최소한으로 축소됨 */
+  /* 보통 상단 고정 헤더를 만들 때 width: 100%;를 필수로 같이 씀 */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+header > .inner {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo img {
+  width: 40px;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+header nav ul li a {
+  position: relative;
+}
+header nav ul li a:hover {
+  color: #9b30ff;
+}
+/* 가상 요소의 장점은 HTML 구조 추가와 class 속성 값의 추가 없이 구현 및 제어 가능 */
+header nav ul li a::after {
+  content: ""; /* 필수 속성 */
+  display: block;
+  width: 0; /* 초기에는 밑줄이 안보이도록 0으로 설정 */
+  height: 2px;
+  background-color: #e0c4fa;
+  transition: width 0.5s;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+header nav ul li a:hover::after {
+  width: 100%; /* 호버 시 밑줄이 완전히 나타나도록 100%f로 설정 */
+}
+
+/* VISUAL */
+.visual {
+  /* (중요)
+    헤더가 fixed 되어 일반 배치 흐름에서 벗어남(주변 요소들과 상호작용하지 않음)
+    fixed 헤더 다음에 오는 섹션은 헤더의 높이만큼 외부 여백 추가 필요
+  */
+  margin-top: 60px;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+.visual > .inner {
+  height: calc(100vh - 60px);
+  font-size: 70px;
+  display: flex;
+  align-items: center;
+}
+.visual > .inner .purple {
+  color: #9b30ff;
+}
+.animate-flash {
+  animation: flash 0.8s infinite;
+ }
+
+ /* ABOUT */
+.about {
+  padding: 150px 0;
+}
+.about .about__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.about .about__wrapper .about__img {
+  width: 40%;
+}
+.about .about__wrapper .about__img img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about  .about__wrapper .about__text {
+  width: 40%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.about  .about__wrapper .about__text .slogan {
+  font-size: 35px;
+  font-weight: bold;
+}
+.about  .about__wrapper .about__text h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.about  .about__wrapper .about__text h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.about  .about__wrapper .about__text li {
+  line-height: 1.8;
+}
+
+/* 애니메이션 정의는 맨 마지막에 */
+@keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+
+
+
