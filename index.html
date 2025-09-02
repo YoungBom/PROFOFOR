@@ -49,19 +49,15 @@
 </head>
 
 <body>
-  <!-- 폰트 테스트 -->
-  <!-- <span>헬로 프롬티 아덜 싸이드~</span>
-   <hr>
-   <span class="font-en">Hello from the other side~</span> -->
-
+  
   <!-- HEADER -->
   <header>
     <div class="inner">
-      <!-- 로고 -->
+      <!-- LOGO -->
       <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="레고">
+        <img src="./images/mococo.png" alt="레고">
       </a>
-      <!-- 메뉴 -->
+      <!-- MENU -->
       <nav class="font-en">
         <ul>
           <li><a href="#about">ABOUT</a></li>
@@ -114,6 +110,7 @@
         <span class="animate-flash" style="animation-delay: 0.05s;">다</span>
         <span class="animate-flash" style="animation-delay: 0.13s;">.</span>
         <!-- 글자를 묶을땐 span 태그를 쓴다 -->
+      </h1>
     </div>
   </section>
 
@@ -146,8 +143,8 @@
         <div>
           <h4 class="font-en">EDUCATION</h4>
           <ul>
-            <li>10.03 ~ 12.02 oo학교 oo과 졸업</li>
-            <li>26.05 ~ 28.01 클라우드(AWS)활용 자바/스프링 개발 부트캠프 수료</li>
+            <li>25.07 ~ 26.01 구디아카데미 클라우드(AWS)활용 자바/스프링 개발 부트캠프 수료 </li>
+
           </ul>
         </div>
       </div>
@@ -249,7 +246,43 @@
           </ul>
           <div class="btn-group">
             <a href="javascript:void(0)" class="btn btn-modal">README</a>
-            <a href="javascript:void(0)" class="btn btn--brown">이미지</a>
+            <a href="javascript:void(0)" class="btn btn--purple btn-modal-image"
+              data-image-src="images/work_1.jpg">이미지</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="port">
+        <div class="port__img">
+          <!-- 슬라이드 -->
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/work_3.jpg" alt="산출물1">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/work_4.jpg" alt="산출물2">
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+        <div class="port__text">
+          <h3>프로젝트명</h3>
+          <ul>
+            <li><span>주요 기능 : </span>주요 기능 설명</li>
+            <li><span>적용 기술 : </span>HTML, CSS, JS, React, Java, Spring Boot</li>
+            <li><span>GitHub : </span>깃허브 주소</li>
+            <li><span>URL : </span>배포 주소</li>
+          </ul>
+          <div class="btn-group">
+            <a href="javascript:void(0)" class="btn btn-modal">README</a>
+            <a href="javascript:void(0)" class="btn btn--brown btn-modal-image"
+              data-image-src="images/work_3.jpg">이미지</a>
           </div>
         </div>
       </div>
