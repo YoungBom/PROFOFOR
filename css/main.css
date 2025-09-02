@@ -54,6 +54,7 @@ a {
   max-width: 1200px;
   /* 가로 너비를 가진 블록 요소의 가운데 정렬 */
   margin: 0 auto;
+  
 }
 
 /* 이미지 block 처리를 공통 스타일로 적용 */
@@ -78,6 +79,11 @@ img {
   margin: 24px auto 0;
 }
 
+.title-header {
+  font-weight: bold;
+  font-size: 30px;
+  
+}
 /* 버튼과 같이 여러 곳에서 반복 사용되는 요소는 공통 스타일로 작업 */
 .btn {
   display: block;
@@ -156,10 +162,16 @@ header>.inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 header .logo img {
-  width: 40px;
+  width: 50px;
+  /* justify-self: start;
+  display: flex;
+  align-items: center;
+   */
+
 }
 
 header nav ul {
@@ -211,6 +223,9 @@ header nav ul li a:hover::after {
   color: #000000;
 }
 
+header{
+  background-color: rgb(208, 236, 247);
+}
 .visual>.inner {
   height: calc(100vh - 60px);
   font-size: 70px;
@@ -219,7 +234,7 @@ header nav ul li a:hover::after {
 }
 
 .visual>.inner .purple {
-  color: #f34129;
+  color: #9a6fe9;
 }
 
 /* ABOUT */
@@ -233,7 +248,7 @@ header nav ul li a:hover::after {
 
 .about .about__wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
 }
 
 .about .about__wrapper .about__img {
@@ -624,15 +639,4 @@ footer .copyright {
   }
 }
 
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(50px);
-  }
-  /* 위로 50px 이동 */
-  100% {
-    transform: translateY(0);
-  }
-}
+
