@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,117 +8,129 @@
   <title>Toes | BackEnd Developer</title>
 
   <!-- 파비콘 적용 -->
-   <!-- 파비콘(favicon.ico)은 프로젝트 폴더의 최상위(Root) 경로에 포함시키면 
-    자동 적용 최상위 경로가 없거나, 
-    ico가 아닌 별도 파일을 가진 경우에는 <link>로 적용 -->
+  <!-- 파비콘(favicon.ico)은 프로젝트 폴더의 최상위(Root) 경로에 포함시키면 자동 적용
+    최상위 경로에 없거나, ico가 아닌 별도 파일을 가진 경우에는 <link>로 적용 -->
   <link rel="icon" href="favicon.ico">
-  <!-- (참고) 파비콘 만들기: https://iconifier.net  -->
+  <!-- (참고) 파비콘 만들기: https://iconifier.net -->
 
   <!-- reset.css 적용 -->
-   <!--스타일 초기화: 브라우저 별로 다른 기본스타일이 적용되는 것을 초기화 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+  <!-- 스타일 초기화: 브라우저 별로 다른 기본스타일이 적용되는 것을 초기화 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
 
-   <!-- 구글 웹폰트 연결 -->
-    <!-- 구글 웹폰트: 경량화된 오픈 라이선스 폰트, 한글을 지원하는지 확인 및 필요한 굵기 선택 후 연결 -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <!-- 구글 웹폰트 연결 -->
+  <!-- 구글 웹폰트: 경량화된 오픈 라이선스 폰트, 한글을 지원하는지 확인 및 필요한 굵기 선택 후 연결 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
 
-   <!-- 구글 머터리얼 아이콘 연결  -->
-   <!-- 구글 머터리얼 아이콘: 구글에서 제공하는 머터리얼 스타일의 아이콘, 글자처럼 취급 가능한 장점 -->
-   <!-- 그 외 fontawesome, bottstrap icon 등 -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=bolt" />
+  <!-- 구글 머티리얼 아이콘 연결 -->
+  <!-- 구글 머티리얼 아이콘: 구글에서 제공하는 머티리얼 스타일의 아이콘, 글자처럼 취급 가능한 장점 -->
+  <!-- 그 외 fontawesome, bootstrap icon 등 -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
-   <!-- main.css -->
-    <link rel="stylesheet" href="css/main.css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <!--main js  -->
-    <script defer src="js/main.js"></script>
-  
-  </head>
+  <!-- main.css -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- ScrollMagic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+    integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- main.js -->
+  <script defer src="js/main.js"></script>
+</head>
+
 <body>
   <!-- 폰트 테스트 -->
-   <!-- <span>헬로 프롬티 아덜 싸이드~</span>
+  <!-- <span>헬로 프롬티 아덜 싸이드~</span>
    <hr>
    <span class="font-en">Hello from the other side~</span> -->
-   
-   <!-- HEADER -->
-    <header>
-      <div class="inner">
-        <!-- 로고 -->
-        <a href="index.html" class="logo">
-          <img src="images/logo.png" alt="레고">
-        </a>
-        <!-- 메뉴 -->
-         <nav class="font-en">
-          <ul>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#skill">SKILL</a></li>
-            <li><a href="#project">PROJECT</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-          </ul>
-         </nav>
-      </div>
-    </header>
-    <!-- VISUAL -->
-     <!-- 첫 화면에 눈길을 끌 수 있는 자기를 소개하는 내용 담기 -->
-      <section class="visual">
-        <div class="inner">
-          <h1 class="font-en">
-        <span class="animate-flash" style="animation-delay: 0.04s;">반</span>
-          <span class="animate-flash" style="animation-delay: 0.26s;">짝</span>
-          <span class="animate-flash" style="animation-delay: 0.08s;">반</span>
-          <span class="animate-flash" style="animation-delay: 0.02s;">짝</span>
-          &nbsp;
-          <span class="animate-flash purple" style="animation-delay: 0.26s;">빛</span>
-          <span class="animate-flash purple" style="animation-delay: 0.06s;">나</span>
-          <span class="animate-flash purple" style="animation-delay: 0.14s;">는</span>
-          <br>
-          <span class="animate-flash" style="animation-delay: 0.06s;">B</span>
-          <span class="animate-flash" style="animation-delay: 0.28s;">a</span>
-          <span class="animate-flash" style="animation-delay: 0.12s;">c</span>
-          <span class="animate-flash" style="animation-delay: 0.15s;">k</span>
-          &nbsp;
-          <span class="animate-flash" style="animation-delay: 0.02s;">E</span>
-          <span class="animate-flash" style="animation-delay: 0.22s;">n</span>
-          <span class="animate-flash" style="animation-delay: 0.17s;">d</span>
-          
-          &nbsp;
-          <span class="animate-flash purple" style="animation-delay: 0.11s;">D</span>
-          <span class="animate-flash purple" style="animation-delay: 0.18s;">e</span>
-          <span class="animate-flash purple" style="animation-delay: 0.05s;">v</span>
-          <span class="animate-flash purple" style="animation-delay: 0.06s;">e</span>
-          <span class="animate-flash purple" style="animation-delay: 0.09s;">l</span>
-          <span class="animate-flash purple" style="animation-delay: 0.24s;">o</span>
-          <span class="animate-flash purple" style="animation-delay: 0.28s;">p</span>
-          <span class="animate-flash purple" style="animation-delay: 0.14s;">e</span>
-          <span class="animate-flash purple" style="animation-delay: 0.25s;">r</span>
-          <br>
-          <span class="animate-flash purple" style="animation-delay: 0.10s;">김</span>
-          <span class="animate-flash purple" style="animation-delay: 0.16s;">성</span>
-          <span class="animate-flash purple" style="animation-delay: 0.24s;">대</span>
-          <span class="animate-flash" style="animation-delay: 0.12s;">입</span>
-          <span class="animate-flash" style="animation-delay: 0.15s;">니</span>
-          <span class="animate-flash" style="animation-delay: 0.05s;">다</span>
-          <span class="animate-flash" style="animation-delay: 0.13s;">.</span>
-          <!-- 글자를 묶을땐 span 태그를 쓴다 -->
-        </div>
-      </section>
 
-      <!-- ABOUT -->
-       <section id = "about" class = "about">
-          <div class="inner">
-            <h2 class="title font-en">ABOUT</h2>
-            <div class="about__wrapper">
-              <div class="about__img">
-                <!-- 본인 프로필 이미지 넣기 -->
-                 <img src="images/profile.jpg" alt="이미지">
-                </div>
-                <div class="about_text">
-                </div>
-                 <!-- 본인 슬로건, 이름(생년월일), 학년 또는 교육 사항 등 작성 -->
-                 <strong class="slogan font-end">Good Luck, Try Your Best, Don't Give Up</strong>
-                 <!-- (참고) 단순한 굵은 글씨가 아니라 "중요한 의미를 갖는 텍스트" 를 강조할 때 사용
+  <!-- HEADER -->
+  <header>
+    <div class="inner">
+      <!-- 로고 -->
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="레고">
+      </a>
+      <!-- 메뉴 -->
+      <nav class="font-en">
+        <ul>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#skill">SKILL</a></li>
+          <li><a href="#project">PROJECT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- VISUAL -->
+  <!-- 첫 화면에 눈길을 끌 수 있는 자기를 소개하는 내용 담기 -->
+  <section class="visual">
+    <div class="inner">
+      <h1 class="font-en">
+        <span class="animate-flash" style="animation-delay: 0.04s;">반</span>
+        <span class="animate-flash" style="animation-delay: 0.26s;">짝</span>
+        <span class="animate-flash" style="animation-delay: 0.08s;">반</span>
+        <span class="animate-flash" style="animation-delay: 0.02s;">짝</span>
+        &nbsp;
+        <span class="animate-flash purple" style="animation-delay: 0.26s;">빛</span>
+        <span class="animate-flash purple" style="animation-delay: 0.06s;">나</span>
+        <span class="animate-flash purple" style="animation-delay: 0.14s;">는</span>
+        <br>
+        <span class="animate-flash" style="animation-delay: 0.06s;">B</span>
+        <span class="animate-flash" style="animation-delay: 0.28s;">a</span>
+        <span class="animate-flash" style="animation-delay: 0.12s;">c</span>
+        <span class="animate-flash" style="animation-delay: 0.15s;">k</span>
+        &nbsp;
+        <span class="animate-flash" style="animation-delay: 0.02s;">E</span>
+        <span class="animate-flash" style="animation-delay: 0.22s;">n</span>
+        <span class="animate-flash" style="animation-delay: 0.17s;">d</span>
+
+        &nbsp;
+        <span class="animate-flash purple" style="animation-delay: 0.11s;">D</span>
+        <span class="animate-flash purple" style="animation-delay: 0.18s;">e</span>
+        <span class="animate-flash purple" style="animation-delay: 0.05s;">v</span>
+        <span class="animate-flash purple" style="animation-delay: 0.06s;">e</span>
+        <span class="animate-flash purple" style="animation-delay: 0.09s;">l</span>
+        <span class="animate-flash purple" style="animation-delay: 0.24s;">o</span>
+        <span class="animate-flash purple" style="animation-delay: 0.28s;">p</span>
+        <span class="animate-flash purple" style="animation-delay: 0.14s;">e</span>
+        <span class="animate-flash purple" style="animation-delay: 0.25s;">r</span>
+        <br>
+        <span class="animate-flash purple" style="animation-delay: 0.10s;">김</span>
+        <span class="animate-flash purple" style="animation-delay: 0.16s;">성</span>
+        <span class="animate-flash purple" style="animation-delay: 0.24s;">대</span>
+        <span class="animate-flash" style="animation-delay: 0.12s;">입</span>
+        <span class="animate-flash" style="animation-delay: 0.15s;">니</span>
+        <span class="animate-flash" style="animation-delay: 0.05s;">다</span>
+        <span class="animate-flash" style="animation-delay: 0.13s;">.</span>
+        <!-- 글자를 묶을땐 span 태그를 쓴다 -->
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="inner">
+      <h2 class="title font-en">ABOUT</h2>
+      <div class="about__wrapper">
+        <div class="about__img">
+          <!-- 본인 프로필 이미지 넣기 -->
+          <img src="images/avatar.jpg" alt="이미지">
+        </div>
+        <div class="about_text">
+        </div>
+        <!-- 본인 슬로건, 이름(생년월일), 학년 또는 교육 사항 등 작성 -->
+        <strong class="slogan font-end">Good Luck, Try Your Best, Don't Give Up</strong>
+        <!-- (참고) 단순한 굵은 글씨가 아니라 "중요한 의미를 갖는 텍스트" 를 강조할 때 사용
             즉, 요즘은 단순히 시각적으로 강조하려면 <b>보다 CSS를 쓰는 게 일반적이고,
             의미상 강조(semantic)가 필요할 땐 <strong>을 쓰는 게 표준
 
@@ -129,17 +142,197 @@
             스크린 리더에서의 차이
             <strong>은 스크린 리더에서 강조해서 읽힘(강조 톤)
             <b>는 그런 의미 전달 없음 -->
-              <h3 class="font-en">Kim Seong Dae (1887.01.14)</h3>
-              <div>
-                <h4 class="font-en">EDUCATION</h4>
-                <ul>
-                  <li>10.03 ~ 12.02 oo학교 oo과 졸업</li>
-                  <li>26.05 ~ 28.01 클라우드(AWS)활용 자바/스프링 개발 부트캠프 수료</li>
-                </ul>
+        <h3 class="font-en">Kim Seong Dae (1887.01.14)</h3>
+        <div>
+          <h4 class="font-en">EDUCATION</h4>
+          <ul>
+            <li>10.03 ~ 12.02 oo학교 oo과 졸업</li>
+            <li>26.05 ~ 28.01 클라우드(AWS)활용 자바/스프링 개발 부트캠프 수료</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 연락처 버튼 -->
+      <div class="about__btn font-en">
+        <a href="#contact">
+          <img src="images/icon/icon_contact.png" alt="연락처">CONTACT
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILL -->
+  <section id="skill" class="skill scroll-spy">
+    <div class="inner">
+      <h2 class="title font-en">SKILL</h2>
+      <!-- 스킬 추가하려면 li 요소 복사 붙여넣기 -->
+      <ul class="skill__list">
+        <li>
+          <h3 class="font-en">Java</h3>
+          <h4 class="font-en">Java<br>Programing</h4>
+          <ul>
+            <li>객체지향</li>
+            <li>파일 입출력</li>
+            <li>JDBC</li>
+          </ul>
+        </li>
+        <li>
+          <h3 class="font-en">Html</h3>
+          <h4 class="font-en">HTML5</h4>
+          <ul>
+            <li>웹페이지 구조 설계</li>
+            <li>시맨틱 태그</li>
+          </ul>
+        </li>
+        <li>
+          <h3 class="font-en">Css</h3>
+          <h4 class="font-en">CSS3</h4>
+          <ul>
+            <li>웹페이지 레이아웃 설계</li>
+            <li>웹페이지 디자인</li>
+            <li>반응형 제작</li>
+          </ul>
+        </li>
+        <li>
+          <h3 class="font-en">Js</h3>
+          <h4 class="font-en">JavaScript</h4>
+          <ul>
+            <li>DOM 조작, 제어</li>
+            <li>이벤트 처리</li>
+            <li>비동기 통신</li>
+          </ul>
+        </li>
+        <li>
+          <h3 class="font-en">React</h3>
+          <h4 class="font-en">React JS</h4>
+          <ul>
+            <li>SPA 개발</li>
+            <li>전역 상태 관리</li>
+            <li>클라이언트 라우팅</li>
+            <li>CSR 방식 앱개발</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECT -->
+  <section id="project" class="project font-en">
+    <div class="inner">
+      <h2 class="title">PROJECT</h2>
+      <div class="port">
+        <div class="port__img">
+          <!-- 슬라이드 -->
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/work_1.jpg" alt="산출물1">
               </div>
+              <div class="swiper-slide">
+                <img src="images/work_2.jpg" alt="산출물2">
               </div>
             </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
-       </section>
+        </div>
+        <div class="port__text">
+          <h3>프로젝트명</h3>
+          <ul>
+            <li><span>주요 기능 : </span>주요 기능 설명</li>
+            <li><span>적용 기술 : </span>HTML, CSS, JS, React, Java, Spring Boot</li>
+            <li><span>GitHub : </span>깃허브 주소</li>
+            <li><span>URL : </span>배포 주소</li>
+          </ul>
+          <div class="btn-group">
+            <a href="javascript:void(0)" class="btn btn-modal">README</a>
+            <a href="javascript:void(0)" class="btn btn--brown">이미지</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact font-en scroll-spy">
+    <div class="inner">
+      <h2 class="title">CONTACT</h2>
+      <div class="contact__info">
+        <ul>
+          <li>
+            <a href="https://github.com/geoblo" target="_blank">github.com/geoblo</a>
+          </li>
+          <li>010-1234-5678</li>
+          <li>geoblo@naver.com</li>
+        </ul>
+      </div>
+      <div class="contact__sns">
+        <ul>
+          <li>
+            <a href="#인스타그램주소" target="_blank">
+              <img src="images/icon/icon_insta.png" alt="인스타그램">
+            </a>
+          </li>
+          <li>
+            <a href="#유튜브주소" target="_blank">
+              <img src="images/icon/icon_youtube.png" alt="유튜브">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="inner">
+      <p class="copyright">
+        &copy; <span class="this-year"></span>
+        <span class="font-en">Kim Jae Hyun. All Rights Reserved.</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <!-- 모달 배경 -->
+  <div id="modal">
+    <!-- 모달 내용 -->
+    <div class="modal-content">
+      <div class="modal-header">
+        README
+        <span class="material-symbols-outlined btn-close">close</span>
+      </div>
+      <div class="modal-body">
+        <p>여기에 모달 내용이 들어갑니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- IMAGE MODAL -->
+  <!-- 모달 배경 -->
+  <div id="imageModal">
+    <!-- 모달 내용 -->
+    <div class="modal-content">
+      <div class="modal-header">
+        이미지
+        <span class="material-symbols-outlined btn-close">close</span>
+      </div>
+      <div class="modal-body">
+        <img src="" alt="이미지">
+        <!-- 1픽셀 투명한 GIF -->
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="이미지">
+      </div>
+    </div>
+  </div>
+  <!-- SCROLL TO TOP -->
+  <div id="toTop">
+    <a href="#">
+      <span class="material-symbols-outlined">arrow_upward</span>
+    </a>
+  </div>
 </body>
+
 </html>
