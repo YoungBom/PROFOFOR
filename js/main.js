@@ -11,8 +11,8 @@ spyEls.forEach(function (spyEl) {
     triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
     triggerHook: 0.5 // 화면의 50% 지점에서 보여짐 여부 감시(0~1사이 지정)
   })
-    .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
-    .addTo(controller); // 컨트롤러에 장면을 할당(필수!)
+  .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
+  .addTo(controller); // 컨트롤러에 장면을 할당(필수!)
 });
 
 // Swiper 사용
@@ -71,7 +71,7 @@ imageCloseBtn.addEventListener('click', function () {
 modal.addEventListener('click', function (e) { // e: 이벤트 발생 시 이벤트 객체가 전달됨
   console.log(e.target); // 현재 이벤트가 발생한 대상(사용자가 실제 클릭한 가장 안쪽 요소)
   console.log(e.currentTarget); // 이벤트가 바인딩된 요소(여기선 modal), this와 동일
-
+  
   if (e.target === e.currentTarget) { // 이벤트 리스너가 붙은 요소 그 자체를 클릭한 경우만 실행
     modal.style.display = 'none';
   }
@@ -127,5 +127,26 @@ window.addEventListener('scroll', function () {
     });
   }
 });
+
+// 모바일용 메뉴
+const hamburgerBtn = document.querySelector('.btn-hamburger');
+const navEl = document.querySelector('header nav');
+const menuItems = document.querySelectorAll('header nav ul li a');
+
+hamburgerBtn.addEventListener('click', function () {
+  navEl.classList.toggle('active');
+});
+
+menuItems.forEach(function (menuItem) {
+  menuItem.addEventListener('click', function () {
+    navEl.classList.remove('active');
+  });
+});
+// 일반 for문 사용
+// for (let i = 0; i < menuItems.length; i++) {
+//   menuItems[i].addEventListener('click', function () {
+//     navEl.classList.remove('active');
+//   });
+// }
 
 
