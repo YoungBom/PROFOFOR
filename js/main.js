@@ -128,4 +128,25 @@ window.addEventListener('scroll', function () {
   }
 });
 
+// 모바일용 메뉴
+const bthburgerBtn = document.querySelector('bth-hamburger');
+const navEl = document.querySelector('header nav'); 
+const menuItems = document.querySelectorAll('header nav ul li a')
 
+hamburgerBtn.addEventListener('click', function (){
+navEl.classList.toggle('active');
+});
+
+// for each문
+menuItems.forEach(function(menuItem){
+menuItem.addEventListener('click', function(){
+  navEl.classList.remove('active');
+});
+});
+
+// 일반 for문
+// for (let i = 0; i< menuItems.length; i++){
+//   menuItems[i].addEventListener('click', function(){
+//     navEl.classList.remove('active');
+//   });
+// };
