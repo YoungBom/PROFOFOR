@@ -1,11 +1,13 @@
 /* COMMON */
 * {
   box-sizing: border-box;
+  
 }
 
 /* x축으로 넘치는 요소가 있을 때 스크롤이 생기지 않도록 방지 */
 /* 모바일 브라우저에서는 body보다 html을 기준으로 스크롤을 판단 */
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -40,13 +42,9 @@ a {
   /* 고정 길이=고정형 */
   /* width: 1200px; */
   /* 최대값만 제한=반응형 */
-  /* max-width: 1200px; */
+  max-width: 1200px;
   /* 가로 너비를 가진 블록 요소의 가운데 정렬 */
   margin: 0 auto;
-<<<<<<< HEAD
-
-=======
->>>>>>> c1b3a8c1d913dc0e46783bf2bf314f20ed15e22e
 }
 
 /* 이미지 block 처리를 공통 스타일로 적용 */
@@ -61,6 +59,7 @@ img {
   text-align: center;
   margin-bottom: 50px;
 }
+
 .title::after {
   content: "";
   display: block;
@@ -70,18 +69,12 @@ img {
   margin: 24px auto 0;
 }
 
-<<<<<<< HEAD
-.title-header {
-  font-weight: bold;
-  font-size: 30px;
-}
-
-=======
->>>>>>> c1b3a8c1d913dc0e46783bf2bf314f20ed15e22e
 /* 버튼과 같이 여러 곳에서 반복 사용되는 요소는 공통 스타일로 작업 */
 .btn {
-  display: block; /* a, span 같은 인라인 요소를 버튼으로 사용할 수 있으니 블록으로 지정 */
-  width: 120px; /* 버튼마다 크기가 같아야 하면 고정 길이, 아니면 그냥 패딩만 주기 */
+  display: block;
+  /* a, span 같은 인라인 요소를 버튼으로 사용할 수 있으니 블록으로 지정 */
+  width: 120px;
+  /* 버튼마다 크기가 같아야 하면 고정 길이, 아니면 그냥 패딩만 주기 */
   padding: 10px;
   border: 2px solid #333;
   border-radius: 4px;
@@ -98,22 +91,27 @@ img {
   cursor: url("https://blog.kakaocdn.net/dn/BQXpN/btq3qNR67Lg/8tx8tGzkOcr5BuX5dyIaKk/img.png") 58 58, auto;
   /* cursor: url("../images/byungari.png") 60 80, auto; */
 }
+
 .btn:hover {
   background-color: #333;
   color: #fff;
 }
+
 .btn.btn--purple {
   color: #9b30ff;
   border-color: #9b30ff;
 }
+
 .btn.btn--purple:hover {
   color: #fff;
   background-color: #9b30ff;
 }
+
 .btn.btn--brown {
   color: #592b18;
   border-color: #592b18;
 }
+
 .btn.btn--brown:hover {
   color: #fff;
   background-color: #592b18;
@@ -123,15 +121,8 @@ img {
   animation-name: flash;
   animation-duration: 0.5s;
   animation-iteration-count: 2;
-<<<<<<< HEAD
-  /* animation-timing-function: cubic-bezier(.43, .19, .02, 1); */
+  animation-timing-function: cubic-bezier(.43, .19, .02, 1);
 }
-
-
-=======
-  animation-timing-function: cubic-bezier(.43,.19,.02,1);
-}
->>>>>>> c1b3a8c1d913dc0e46783bf2bf314f20ed15e22e
 
 /* HEADER */
 header {
@@ -148,48 +139,42 @@ header {
   left: 0;
   z-index: 10;
 }
-header > .inner {
+
+header>.inner {
   height: 60px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-<<<<<<< HEAD
-
-=======
->>>>>>> c1b3a8c1d913dc0e46783bf2bf314f20ed15e22e
 }
+
 header .logo img {
-<<<<<<< HEAD
-  width: 50px;
-  position: absolute;
-
-  /* justify-self: start;
-  display: flex;
-  align-items: center;
-   */
-
-=======
   width: 40px;
->>>>>>> c1b3a8c1d913dc0e46783bf2bf314f20ed15e22e
 }
+
 header nav ul {
   display: flex;
 }
+
 header nav ul li {
   padding: 10px 20px;
   font-weight: bold;
 }
+
 header nav ul li a {
   position: relative;
 }
+
 header nav ul li a:hover {
   color: #9b30ff;
 }
+
 /* 가상 요소의 장점은 HTML 구조 추가와 class 속성 값의 추가 없이 구현 및 제어 가능 */
 header nav ul li a::after {
-  content: ""; /* 필수 속성 */
+  content: "";
+  /* 필수 속성 */
   display: block;
-  width: 0; /* 초기에는 밑줄이 안보이도록 0으로 설정 */
+  width: 0;
+  /* 초기에는 밑줄이 안보이도록 0으로 설정 */
   height: 2px;
   background-color: #e0c4fa;
   transition: width 0.5s;
@@ -197,67 +182,22 @@ header nav ul li a::after {
   left: 0;
   bottom: -4px;
 }
+
 header nav ul li a:hover::after {
-  width: 100%; /* 호버 시 밑줄이 완전히 나타나도록 100%f로 설정 */
+  width: 100%;
+  /* 호버 시 밑줄이 완전히 나타나도록 100%f로 설정 */
 }
+
 /* 햄버거 버튼 */
 header .btn-hamburger {
   display: none;
 }
+
 header .btn-hamburger .material-symbols-outlined {
   font-size: 40px;
   /* 수직 정렬 맞추기 */
   display: block;
   /* line-height: 60px; */
-}
-
-/* 햄버거 버튼 */
-header .btn-hamburger {
-  display: none;
-}
-
-header .btn-hamburger .material-symbols-outlined {
-  font-size: 40px;
-  /* 수직 정렬 맞추기 */
-  display: block;
-}
-
-header nav {
-  background-color: #fff8e8;
-  position: fixed;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  /* height: 100%; */
-  height: 0;
-  overflow: hidden;
-  transition: 0.3s;
-}
-
-header nav.active {
-  height: 100%;
-}
-
-header nav ul {
-  /* 1) ul 태그를 원래 보여짐 특성인 블록으로 원복 또는 flex 방향 바꾸기 */
-  /* display:block; */
-  flex-direction: column;
-  padding-top: 60px;
-
-}
-
-header nav ul li {
-  padding: 10px 80px;
-  font-size: 30px;
-
-}
-
-header nav ul li a {
-  transition: 0.5s;
-}
-
-header nav ul li a:hover {
-  letter-spacing: 10px;
 }
 
 /* VISUAL */
@@ -271,68 +211,42 @@ header nav ul li a:hover {
   background-color: #000;
   color: #fff;
 }
-<<<<<<< HEAD
-
-header {
-  background-color: rgb(208, 236, 247);
-}
 
 .visual>.inner {
-=======
-.visual > .inner {
->>>>>>> c1b3a8c1d913dc0e46783bf2bf314f20ed15e22e
   height: calc(100vh - 60px);
   font-size: 70px;
   display: flex;
   align-items: center;
 }
-.visual > .inner .purple {
+
+.visual>.inner .purple {
   color: #9b30ff;
-}
-
-/* VISUAL MOBILE */
-.visual>.inner .mobile-lf {
-  display: inline !important;
-}
-
-/* ABOUT MOBILE */
-.about {
-  padding: 100px 0;
-}
-
-.about .about__wrapper {
-  flex-direction: column;
-}
-
-.about .about__wrapper .about__img {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.about .about__wrapper .about__text {
-  width: 100%;
-  text-align: center;
 }
 
 /* ABOUT */
 .about {
   padding: 150px 0;
 }
-.about > .inner {
+
+.about>.inner {
   position: relative;
 }
+
 .about .about__wrapper {
   display: flex;
   justify-content: space-between;
 }
+
 .about .about__wrapper .about__img {
   width: 40%;
 }
+
 .about .about__wrapper .about__img img {
   width: 100%;
   border-radius: 50%;
   box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.1);
 }
+
 .about .about__wrapper .about__text {
   width: 40%;
   padding: 30px;
@@ -340,27 +254,33 @@ header {
   flex-direction: column;
   justify-content: space-evenly;
 }
+
 .about .about__wrapper .about__text .slogan {
   font-size: 35px;
   font-weight: bold;
 }
+
 .about .about__wrapper .about__text h3 {
   font-size: 20px;
   font-weight: 600;
 }
+
 .about .about__wrapper .about__text h4 {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 16px;
 }
+
 .about .about__wrapper .about__text li {
   line-height: 1.8;
 }
+
 .about .about__btn {
   position: absolute;
   right: 30px;
   bottom: -30px;
 }
+
 /* .about .about__btn a {
   display: flex;
   align-items: center;
@@ -379,9 +299,11 @@ header {
   background-color: #000;
   color: #fff;
 }
+
 .skill .title::after {
   background-color: #fff;
 }
+
 .skill .skill__list {
   display: flex;
   justify-content: space-evenly;
@@ -389,8 +311,9 @@ header {
   gap: 30px;
   text-align: center;
 }
+
 /* 하위 선택자가 아닌 자식 선택자 쓴 것에 유의! */
-.skill .skill__list > li {
+.skill .skill__list>li {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -405,20 +328,36 @@ header {
   transition: 1s;
   opacity: 0;
 }
+
 /* hover로 먼저 테스트 */
 /* .skill .skill__list > li:hover { */
-.skill.show .skill__list > li {
+.skill.show .skill__list>li {
   /* 방법1: position */
   /* top: 0; */
   /* 방법2: transform */
   transform: translateY(0);
   opacity: 1;
 }
-.skill .skill__list > li:nth-child(1) { transition-delay: 0.2s; }
-.skill .skill__list > li:nth-child(2) { transition-delay: 0.4s; }
-.skill .skill__list > li:nth-child(3) { transition-delay: 0.6s; }
-.skill .skill__list > li:nth-child(4) { transition-delay: 0.8s; }
-.skill .skill__list > li:nth-child(5) { transition-delay: 1s; }
+
+.skill .skill__list>li:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.skill .skill__list>li:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+.skill .skill__list>li:nth-child(3) {
+  transition-delay: 0.6s;
+}
+
+.skill .skill__list>li:nth-child(4) {
+  transition-delay: 0.8s;
+}
+
+.skill .skill__list>li:nth-child(5) {
+  transition-delay: 1s;
+}
 
 .skill .skill__list li h3 {
   width: 50px;
@@ -431,77 +370,45 @@ header {
   transform: rotate(-20deg);
   transition: 0.5s;
 }
+
 .skill .skill__list li:hover h3 {
   transform: rotate(0deg);
 }
+
 .skill .skill__list li h4 {
   font-size: 18px;
   font-weight: bold;
   margin: 30px 0 20px;
 }
 
-/* MOBLILE */
-.skill {
-  padding: 100px 0;
-}
-
-.project {
-  padding: 100px 0;
-}
-
-.project .port {
-  flex-direction: column;
-  margin: 40px 0;
-}
-
-.project .port .port__img,
-.project .port .port__text {
-  width: 100%;
-}
-
-.project .port .port__text{
-  padding: 200px 0 0;
-}
-
-.project .port .bth-group{
-  margin-top: 20px;
-}
-
-.contact{
-  padding: 100px 0;
-}
-
-#modal .modal-content,
-#imageModal .modal-content{
-  width: 80%;
-}
-
-#imageModal .modal-body img {
-  width: 100%;
-}
 /* PROJECT */
 .project {
   padding: 150px 0;
 }
+
 .project .port {
   display: flex;
   margin: 20px 0;
 }
+
 .project .port .port__img,
 .project .port .port__text {
   width: 50%;
   height: 400px;
 }
+
 .project .port .port__img .swiper {
   width: 100%;
   height: 100%;
 }
+
 .project .port .port__img .swiper img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   /* object-fit: cover; */
 }
+
 .project .port .port__text {
   padding: 30px;
   font-size: 14px;
@@ -509,20 +416,25 @@ header {
   flex-direction: column;
   justify-content: space-evenly;
 }
+
 .project .port .port__text h3 {
   font-size: 20px;
   font-weight: 800;
 }
+
 .project .port .port__text li {
   line-height: 1.8;
 }
+
 .project .port .port__text li span {
   font-weight: bold;
 }
+
 .project .port .btn-group {
   display: flex;
   /* column-gap: 40px; */
 }
+
 /* 또는 */
 .project .port .btn-group .btn:first-child {
   margin-right: 40px;
@@ -532,21 +444,25 @@ header {
 .contact {
   padding: 200px 0;
 }
+
 .contact .contact__info li {
   line-height: 2;
   text-align: center;
   transition: 1s;
   opacity: 0;
 }
+
 .contact .contact__info li:nth-child(1),
 .contact .contact__info li:nth-child(3) {
   /* 오른쪽에서 왼쪽으로 나타나는 */
   transform: translateX(150px);
 }
+
 .contact .contact__info li:nth-child(2) {
   /* 왼쪽에서 오른쪽으로 나타나는 */
   transform: translateX(-150px);
 }
+
 .contact.show .contact__info li {
   transform: translateX(0);
   opacity: 1;
@@ -555,22 +471,32 @@ header {
 .contact .contact__sns {
   margin-top: 20px;
 }
+
 .contact .contact__sns ul {
   display: flex;
   justify-content: center;
   column-gap: 10px;
 }
+
 .contact .contact__sns ul li {
   transform: translateY(100px);
   opacity: 0;
   transition: 1s;
 }
+
 .contact.show .contact__sns ul li {
   transform: translateY(0);
   opacity: 1;
 }
-.contact.show .contact__sns ul li:nth-child(1) { transition-delay: 0.2s; }
-.contact.show .contact__sns ul li:nth-child(2) { transition-delay: 0.4s; }
+
+.contact.show .contact__sns ul li:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.contact.show .contact__sns ul li:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
 .contact .contact__sns ul li img {
   width: 30px;
 }
@@ -580,6 +506,7 @@ footer {
   background-color: #000;
   color: #fff;
 }
+
 footer .copyright {
   text-align: center;
   font-weight: 600;
@@ -587,7 +514,8 @@ footer .copyright {
 }
 
 /* MODAL */
-#modal, #imageModal {
+#modal,
+#imageModal {
   /* Quiz: 화면(뷰포트) 전체 영역 덮기 */
   position: fixed;
   top: 0;
@@ -602,9 +530,11 @@ footer .copyright {
   align-items: center;
   display: none;
 }
+
 #modal.show {
   display: flex;
 }
+
 #modal .modal-content {
   background-color: #fff;
   border-radius: 8px;
@@ -613,6 +543,7 @@ footer .copyright {
   /* 상대 길이 */
   width: 60%;
 }
+
 #imageModal .modal-content {
   background-color: #fff;
   border-radius: 8px;
@@ -629,15 +560,18 @@ footer .copyright {
   justify-content: space-between;
   align-items: center;
 }
+
 #modal .modal-header .btn-close,
 #imageModal .modal-header .btn-close {
   font-size: 30px;
   cursor: pointer;
 }
+
 #modal .modal-header .btn-close:hover,
 #imageModal .modal-header .btn-close:hover {
   color: #aaa;
 }
+
 #modal .modal-body,
 #imageModal .modal-body {
   padding: 16px;
@@ -665,6 +599,7 @@ footer .copyright {
   transform: translateX(100px);
   transition: 0.5s;
 }
+
 #toTop .material-symbols-outlined {
   /* 수직 정렬 맞추기 */
   /* display: block; */
@@ -673,30 +608,8 @@ footer .copyright {
 }
 
 /* 반응형 스타일 */
-<<<<<<< HEAD
-@media screen and(max-width:767px) {
-
-  /* 모바일에서는 화면의 80%만 차지하도록 */
-  .inner {
-    width: 80%;
-  }
-
-  .title {
-    font-size: 30px;
-    margin-bottom: 24px;
-
-  }
-
-  .title::after {
-    width: 60px;
-  }
-
-  header .btn-hamburger {
-    display: block;
-  }
-}
-=======
 @media screen and (max-width: 767px) {
+
   /* 모바일에서는 화면의 80%만 차지하도록 */
   .inner {
     width: 80%;
@@ -706,14 +619,15 @@ footer .copyright {
     font-size: 30px;
     margin-bottom: 24px;
   }
+
   .title::after {
     width: 60px;
   }
->>>>>>> c1b3a8c1d913dc0e46783bf2bf314f20ed15e22e
 
   header .btn-hamburger {
     display: block;
   }
+
   header nav {
     background-color: #fff8e8;
     position: fixed;
@@ -725,43 +639,52 @@ footer .copyright {
     overflow: hidden;
     transition: 0.3s;
   }
+
   header nav.active {
     height: 100%;
   }
+
   header nav ul {
     /* 1) ul 태그를 원래 보여짐 특성인 블록으로 원복 또는 flex 방향 바꾸기 */
     /* display: block; */
     flex-direction: column;
     padding-top: 60px;
   }
+
   header nav ul li {
     padding: 10px 80px;
     font-size: 30px;
   }
+
   header nav ul li a {
     transition: 0.5s;
   }
+
   header nav ul li a:hover {
     letter-spacing: 10px;
   }
 
-  .visual > .inner {
+  .visual>.inner {
     font-size: 30px;
   }
-  .visual > .inner .mobile-lf {
+
+  .visual>.inner .mobile-lf {
     display: inline !important;
   }
 
   .about {
     padding: 100px 0;
   }
+
   .about .about__wrapper {
     flex-direction: column;
   }
+
   .about .about__wrapper .about__img {
     width: 80%;
     margin: 0 auto;
   }
+
   .about .about__wrapper .about__text {
     width: 100%;
     text-align: center;
@@ -774,17 +697,21 @@ footer .copyright {
   .project {
     padding: 100px 0;
   }
+
   .project .port {
     flex-direction: column;
     margin: 40px 0;
   }
+
   .project .port .port__img,
   .project .port .port__text {
     width: 100%;
   }
+
   .project .port .port__text {
     padding: 20px 0 0;
   }
+
   .project .port .btn-group {
     margin-top: 20px;
   }
@@ -797,6 +724,7 @@ footer .copyright {
   #imageModal .modal-content {
     width: 80%;
   }
+
   #imageModal .modal-body img {
     width: 100%;
   }
@@ -804,16 +732,15 @@ footer .copyright {
 
 /* 애니메이션 정의는 맨 마지막에 */
 @keyframes flash {
-  0%, 50%, 100% {
+
+  0%,
+  50%,
+  100% {
     opacity: 1;
   }
 
-  25%, 75% {
+  25%,
+  75% {
     opacity: 0;
   }
-<<<<<<< HEAD
 }
-=======
-}
-
->>>>>>> c1b3a8c1d913dc0e46783bf2bf314f20ed15e22e

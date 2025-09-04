@@ -129,14 +129,12 @@ window.addEventListener('scroll', function () {
 });
 
 // 모바일용 메뉴
-<<<<<<< HEAD
+ HEAD
 const bthburgerBtn = document.querySelector('bth-hamburger');
 const navEl = document.querySelector('header nav'); 
 const menuItems = document.querySelectorAll('header nav ul li a')
-=======
-const hamburgerBtn = document.querySelector('.btn-hamburger');
-const navEl = document.querySelector('header nav');
-const menuItems = document.querySelectorAll('header nav ul li a');
+
+
 
 hamburgerBtn.addEventListener('click', function () {
   navEl.classList.toggle('active');
@@ -152,24 +150,9 @@ menuItems.forEach(function (menuItem) {
 //   menuItems[i].addEventListener('click', function () {
 //     navEl.classList.remove('active');
 //   });
-// }
-
->>>>>>> c1b3a8c1d913dc0e46783bf2bf314f20ed15e22e
-
+// } 
 hamburgerBtn.addEventListener('click', function (){
 navEl.classList.toggle('active');
 });
 
-// for each문
-menuItems.forEach(function(menuItem){
-menuItem.addEventListener('click', function(){
-  navEl.classList.remove('active');
-});
-});
 
-// 일반 for문
-// for (let i = 0; i< menuItems.length; i++){
-//   menuItems[i].addEventListener('click', function(){
-//     navEl.classList.remove('active');
-//   });
-// };
